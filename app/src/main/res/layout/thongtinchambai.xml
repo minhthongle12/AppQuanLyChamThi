@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/violet"
+        android:id="@+id/titleTT"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="THÊM THÔNG TIN CHẤM BÀI" />
+
+
+    <LinearLayout
+        android:layout_marginBottom="8dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:background="@drawable/border2"
+            android:layout_weight="3"
+            android:id="@+id/spSoPhieu"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nhập mã phiếu" />
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/ivThemSoPhieu"
+            android:src="@drawable/add"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="8dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:background="@drawable/border2"
+            android:layout_weight="3"
+            android:id="@+id/spMaMon"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Ngày giao" />
+        <ImageView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/ivThemMonHoc"
+            android:src="@drawable/add"
+            android:layout_width="48dp"
+            android:layout_height="48dp"/>
+    </LinearLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:hint="Nhập số bài"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:paddingRight="5dp"
+            android:inputType="number"
+            android:id="@+id/edtSoBai"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTT"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/violet"
+            android:text="THÊM"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnHuyTT"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/violet"
+            android:text="HỦY"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

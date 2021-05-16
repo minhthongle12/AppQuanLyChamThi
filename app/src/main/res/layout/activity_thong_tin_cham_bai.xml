@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".ThongTinChamBaiActivity">
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:id="@+id/line"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSearchCB"
+            android:textSize="18sp"
+            android:hint="Tìm kiếm"
+            android:drawablePadding="15dp"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:layout_below="@id/line"
+        android:id="@+id/lvListCB"
+        android:layout_above="@id/button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/button"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnThemCB"
+            android:textColor="@color/white"
+            android:background="@color/violet"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:text="THÊM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnHomeCB"
+            android:textColor="@color/white"
+            android:background="@color/violet"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:text="HOME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

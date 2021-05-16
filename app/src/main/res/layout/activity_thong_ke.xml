@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".ThongKeActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/line"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSearchTK"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawablePadding="15dp"
+            android:hint="Tìm kiếm"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/locDuLieu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:background="@drawable/border2" />
+
+    <LinearLayout
+        android:id="@+id/lnTKChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnHomeTK"
+        android:layout_below="@id/locDuLieu"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Tổng số giáo viên: " />
+
+                <TextView
+                    android:id="@+id/tvTongGV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textAlignment="center"
+                    android:textColor="@color/violet"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Tổng số bài: " />
+
+                <TextView
+                    android:id="@+id/tvTongSoBai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textAlignment="center"
+                    android:textColor="@color/violet"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lvListTK"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnHomeTK"
+        android:layout_below="@id/locDuLieu"
+        android:divider="@null" />
+
+    <Button
+        android:id="@+id/btnHomeTK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:background="@color/violet"
+        android:text="HOME"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</RelativeLayout>
