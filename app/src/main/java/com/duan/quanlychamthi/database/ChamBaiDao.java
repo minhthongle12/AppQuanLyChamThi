@@ -5,9 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.duan.quanlychamthi.model.GiaoVien;
-import com.duan.quanlychamthi.model.ThongTinChamBai;
-
 import java.util.ArrayList;
 
 public class ChamBaiDao {

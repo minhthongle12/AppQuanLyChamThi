@@ -10,9 +10,6 @@ import android.widget.Filter;
 import android.widget.TextView;
 
 import com.duan.quanlychamthi.R;
-import com.duan.quanlychamthi.model.ThongTinChamBai;
-import com.duan.quanlychamthi.model.PhieuChamBai;
-import com.duan.quanlychamthi.model.ThongTinChamBai;
 
 import java.util.ArrayList;
 
