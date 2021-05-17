@@ -44,15 +44,21 @@ public class RegisterActivity extends AppCompatActivity {
                 mk = pass.getText().toString();
                 mk2 = pass2.getText().toString();
 
-                progressDialog.setMessage("Đang đăng ký...");
-                progressDialog.show();
-                TaiKhoanDao taiKhoanDao = new TaiKhoanDao(RegisterActivity.this);
-                if (taiKhoanDao.them(new TaiKhoan(tk, mk))) {
-                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                    intent.putExtra("tk", tk);
-                    intent.putExtra("mk", mk);
-                    progressDialog.dismiss();
-                    startActivity(intent);
+                if (checkValidate(tk, mk, mk2)) {
+                    progressDialog.setMessage("Đang đăng ký...");
+                    progressDialog.show();
+                    TaiKhoanDao taiKhoanDao = new TaiKhoanDao(RegisterActivity.this);
+                    if (taiKhoanDao.them(new TaiKhoan(tk, mk))) {
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                        intent.putExtra("tk", tk);
+                        intent.putExtra("mk", mk);
+                        progressDialog.dismiss();
+                        startActivity(intent);
+                    } else {
+                        dialog.show("Tài khoản đã tồn tại");
+                        progressDialog.dismiss();
+                    }
+
                 }
 
             }
@@ -69,5 +75,18 @@ public class RegisterActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
     }
 
-   
+    private Boolean checkValidate(String tk, String mk, String mk2) {
+        Boolean check = false;
+        if (tk.isEmpty() || mk.isEmpty() || mk2.isEmpty()) {
+            dialog.show("Không được để trống!");
+        } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(tk).matches()) {
+            dialog.show("Không đúng dạng email!");
+        } else if (!mk.equals(mk2)) {
+            dialog.show("Mật khẩu không khớp nhau!");
+        } else {
+            check = true;
+        }
+
+        return check;
+    }
 }
