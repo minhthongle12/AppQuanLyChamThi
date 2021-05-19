@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-//    private LinearLayout lnCamera, lnGV, lnPhieuCham, lnThongTin, lnMonHoc, lnThongKe;
     private LinearLayout lnGV;
     private LinearLayout lnMonHoc;
     private Animation blink, l1, l2, l3, l12, l22, l32;
@@ -79,12 +78,8 @@ public class MainActivity extends AppCompatActivity {
         tvAdmin = findViewById(R.id.tvName);
         lnMonHoc = findViewById(R.id.lnMonHoc);
         pref = getSharedPreferences("LOGIN", MODE_PRIVATE);
-//        lnCamera = findViewById(R.id.lnCamera);
         lnGV = findViewById(R.id.lnGiaoVien);
-//        lnPhieuCham = findViewById(R.id.lnPhieuCham);
-//        lnThongTin = findViewById(R.id.lnThongTin);
-//        lnMonHoc = findViewById(R.id.lnMonHoc);
-//        lnThongKe = findViewById(R.id.lnThongKe);
+
         blink = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.faded);
 
         l1 = AnimationUtils.loadAnimation(this, R.anim.bot1);
@@ -96,11 +91,6 @@ public class MainActivity extends AppCompatActivity {
         l32 = AnimationUtils.loadAnimation(this, R.anim.bot32);
 
         lnGV.setAnimation(l1);
-//        lnMonHoc.setAnimation(l12);
-//        lnPhieuCham.setAnimation(l2);
-//        lnThongTin.setAnimation(l22);
-//        lnCamera.setAnimation(l3);
-//        lnThongKe.setAnimation(l32);
     }
 
     @Override
