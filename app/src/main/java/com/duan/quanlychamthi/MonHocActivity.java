@@ -74,7 +74,6 @@ public class MonHocActivity extends AppCompatActivity {
             }
         });
 
-
         //Lọc theo tìm kiếm
         listView.setTextFilterEnabled(true);
         TextInputEditText edSeach = findViewById(R.id.edtSearchMH);

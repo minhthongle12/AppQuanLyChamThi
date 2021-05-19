@@ -16,8 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private LinearLayout lnGV;
-    private LinearLayout lnMonHoc;
+    private LinearLayout lnGV, lnMonHoc;
     private Animation blink, l1, l2, l3, l12, l22, l32;
     SharedPreferences pref;
     TextView tvAdmin;
@@ -61,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
-
         lnMonHoc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void init() {
@@ -86,11 +85,11 @@ public class MainActivity extends AppCompatActivity {
         l2 = AnimationUtils.loadAnimation(this, R.anim.bot2);
         l3 = AnimationUtils.loadAnimation(this, R.anim.bot3);
         l12 = AnimationUtils.loadAnimation(this, R.anim.bot12);
-        lnMonHoc.setAnimation(l12);
         l22 = AnimationUtils.loadAnimation(this, R.anim.bot22);
         l32 = AnimationUtils.loadAnimation(this, R.anim.bot32);
 
         lnGV.setAnimation(l1);
+        lnMonHoc.setAnimation(l12);
     }
 
     @Override
