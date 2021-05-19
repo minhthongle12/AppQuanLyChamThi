@@ -11,7 +11,7 @@ import android.widget.Filter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.duan.quanlychamthi.CameraActivity;
+//import com.duan.quanlychamthi.CameraActivity;
 import com.duan.quanlychamthi.R;
 import com.duan.quanlychamthi.model.GiaoVien;
 import com.duan.quanlychamthi.model.GiaoVien;
