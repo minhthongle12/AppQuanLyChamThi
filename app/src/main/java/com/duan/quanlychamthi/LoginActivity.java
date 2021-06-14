@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                         pref.edit().putString("mk", mk).apply();
                         startActivity(intent);
                     } else {
-                        dialog.show("Sai tài khoản hoặc mật khẩu");
+                        dialog.show("Bạn đã nhập sai tài khoản hoặc mật khẩu");
                     }
                 }
                 ;
